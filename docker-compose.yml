@@ -3,13 +3,15 @@ version: "3.7"
 services:
 
   grafana:
+    restart: always
     image: grafana/grafana:latest
     ports:
       - '3000:3000'
     volumes:
       - grafana-data:/var/lib/grafana
-      #- ./config/:/etc/grafana/provisioning/
       - ./config/:/etc/grafana/provisioning/
+    environment:
+      MYSQL_PASSWORD: password1
 
   mariadb:
     image: mariadb:latest

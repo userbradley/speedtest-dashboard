@@ -1,6 +1,22 @@
 {
   "annotations": {
-    "list": []
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
   },
   "editable": true,
   "fiscalYearStartMonth": 0,
@@ -427,7 +443,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "New dashboard Copy",
+  "title": "Speedtest stats",
   "uid": "gUQMozFnz",
-  "version": 4
+  "version": 1
 }

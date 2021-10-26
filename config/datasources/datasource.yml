@@ -17,5 +17,5 @@ datasources:
     database: internet
     user: root
     secureJsonData:
-      password: password1
+      password: $MYSQL_PASSWORD
     editable: true
