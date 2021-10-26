@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+
+  speedtest:
+    #restart: always
+    image: userbradley/speedtest:env-v0.0.1
+    network_mode: "host"
+    env_file:
+       - .envrc
