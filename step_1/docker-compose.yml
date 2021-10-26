@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+
+  grafana:
+    restart: always
+    image: grafana/grafana:latest
+    ports:
+      - '3000:3000'
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./config/:/etc/grafana/provisioning/
+    environment:
+      MYSQL_PASSWORD: password1
+
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    hostname: "mariadb"
+    command: "mysqld --init-file /data/application/init.sql"
+    volumes:
+      - mariadb-data:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: password1
+volumes:
+  mariadb-data:
+  grafana-data:
