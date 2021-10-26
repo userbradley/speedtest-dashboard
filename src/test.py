@@ -4,9 +4,9 @@ import os
 import mysql.connector
 
 #Database connection part
-db_location = os.getenv('db_location')
-db_username = os.getenv('db_username_root')
-db_password = os.getenv('db_password_root')
+db_location = os.environ.get('db_location')
+db_username = os.environ.get('db_username_root')
+db_password = os.environ.get('db_password_root')
 mydb = mysql.connector.connect(
   host=db_location,
   user=db_username,
